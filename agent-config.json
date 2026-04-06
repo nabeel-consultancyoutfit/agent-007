@@ -1,0 +1,17 @@
+{
+  "provider": "claude-code",
+  "model": "claude-code-native",
+  "maxRetries": 3,
+  "timeoutMs": 60000,
+  "agents": {
+    "frontend-agent": {
+      "allowedTools": ["read_file", "write_file", "list_directory", "run_command", "http_request"]
+    },
+    "backend-agent": {
+      "allowedTools": ["read_file", "write_file", "list_directory", "run_command", "http_request", "db_query"]
+    },
+    "qa-agent": {
+      "allowedTools": ["read_file", "write_file", "run_command", "http_request", "browser_action"]
+    }
+  }
+}
