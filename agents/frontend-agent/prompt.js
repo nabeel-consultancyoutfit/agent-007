@@ -13,6 +13,38 @@ export function getSystemPrompt() {
     resolve(__dirname, '../../skills/auth-patterns.md'),
     'utf-8'
   )
+  const frontendDesignerSkill = readFileSync(
+    resolve(__dirname, '../../skills/frontend-designer.md'),
+    'utf-8'
+  )
+  const websiteClonerSkill = readFileSync(
+    resolve(__dirname, '../../skills/website-cloner.md'),
+    'utf-8'
+  )
+  const websiteDesignExtractorSkill = readFileSync(
+    resolve(__dirname, '../../skills/website-design-extractor.md'),
+    'utf-8'
+  )
+  const interactionReplicatorSkill = readFileSync(
+    resolve(__dirname, '../../skills/interaction-replicator.md'),
+    'utf-8'
+  )
+  const pptxSkill = readFileSync(
+    resolve(__dirname, '../../skills/pptx.md'),
+    'utf-8'
+  )
+  const xlsxSkill = readFileSync(
+    resolve(__dirname, '../../skills/xlsx.md'),
+    'utf-8'
+  )
+  const docxSkill = readFileSync(
+    resolve(__dirname, '../../skills/docx.md'),
+    'utf-8'
+  )
+  const pdfSkill = readFileSync(
+    resolve(__dirname, '../../skills/pdf.md'),
+    'utf-8'
+  )
 
   return `You are a senior frontend engineer specializing in:
 - Next.js 14+ App Router (NEVER Pages Router)
@@ -67,5 +99,29 @@ Project conventions from skills:
 ${reactComponentSkill}
 
 ${authPatternsSkill}
+
+--- FRONTEND DESIGNER SKILL ---
+${frontendDesignerSkill}
+
+--- WEBSITE CLONER SKILL ---
+${websiteClonerSkill}
+
+--- WEBSITE DESIGN EXTRACTOR SKILL ---
+${websiteDesignExtractorSkill}
+
+--- INTERACTION REPLICATOR SKILL ---
+${interactionReplicatorSkill}
+
+--- PPTX SKILL ---
+${pptxSkill}
+
+--- XLSX SKILL ---
+${xlsxSkill}
+
+--- DOCX SKILL ---
+${docxSkill}
+
+--- PDF SKILL ---
+${pdfSkill}
 `
 }

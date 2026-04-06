@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs'
 
-const TASKS_FILE = '.dex-tasks.json'
+const TASKS_FILE = '.agent-tasks.json'
 const tasks = new Map()
 
 function loadFromDisk() {

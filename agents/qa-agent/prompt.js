@@ -9,6 +9,10 @@ export function getSystemPrompt() {
     resolve(__dirname, '../../skills/testing-guide.md'),
     'utf-8'
   )
+  const websiteReverseEngineerSkill = readFileSync(
+    resolve(__dirname, '../../skills/website-reverse-engineer.md'),
+    'utf-8'
+  )
 
   return `You are a senior QA engineer. You write:
 - Playwright e2e tests for the Next.js frontend at http://localhost:3000
@@ -23,5 +27,8 @@ Rules:
 - Jest test files go next to the service: [feature].service.spec.ts
 
 ${testingGuideSkill}
+
+--- WEBSITE REVERSE ENGINEER SKILL (for analyzing target sites before testing) ---
+${websiteReverseEngineerSkill}
 `
 }

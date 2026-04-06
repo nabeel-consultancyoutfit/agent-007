@@ -13,6 +13,18 @@ export function getSystemPrompt() {
     resolve(__dirname, '../../skills/auth-patterns.md'),
     'utf-8'
   )
+  const backendDeveloperSkill = readFileSync(
+    resolve(__dirname, '../../skills/backend-developer.md'),
+    'utf-8'
+  )
+  const websiteReverseEngineerSkill = readFileSync(
+    resolve(__dirname, '../../skills/website-reverse-engineer.md'),
+    'utf-8'
+  )
+  const scheduleSkill = readFileSync(
+    resolve(__dirname, '../../skills/schedule.md'),
+    'utf-8'
+  )
 
   return `You are a senior backend engineer specializing in:
 - NestJS with one module per feature (NEVER put everything in AppModule)
@@ -51,5 +63,14 @@ Project conventions from skills:
 ${restApiSkill}
 
 ${authPatternsSkill}
+
+--- BACKEND DEVELOPER SKILL ---
+${backendDeveloperSkill}
+
+--- WEBSITE REVERSE ENGINEER SKILL ---
+${websiteReverseEngineerSkill}
+
+--- SCHEDULE SKILL ---
+${scheduleSkill}
 `
 }

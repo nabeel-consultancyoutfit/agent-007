@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs'
 
-const MEMORY_FILE = '.dex-memory.json'
+const MEMORY_FILE = '.agent-memory.json'
 
 function readMemory() {
   if (!existsSync(MEMORY_FILE)) {

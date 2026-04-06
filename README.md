@@ -1,4 +1,4 @@
-# DEX — Agentic Fullstack System
+# Agent-007 — Agentic Fullstack System
 
 ## Structure
 - orchestrator/ → brain: plans, delegates, supervises
