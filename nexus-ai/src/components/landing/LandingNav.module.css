@@ -1,0 +1,135 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background: rgba(244,242,238,0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--text);
+}
+.logoMark {
+  width: 26px; height: 26px;
+  background: var(--accent);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+}
+.logoMark svg { width: 14px; height: 14px; }
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  list-style: none;
+}
+.navLinks a {
+  font-size: 0.85rem;
+  color: var(--text2);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.navLinks a:hover { color: var(--text); }
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Language */
+.langWrap { position: relative; }
+.langBtn {
+  display: flex; align-items: center; gap: 5px;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--border2);
+  border-radius: 2rem;
+  background: var(--white);
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: var(--text2);
+  font-family: 'Instrument Sans', sans-serif;
+  transition: all 0.15s;
+}
+.langBtn:hover { border-color: var(--accent); color: var(--accent); }
+
+.langMenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  min-width: 180px;
+  z-index: 500;
+  overflow: hidden;
+  animation: sqFadeIn 0.18s ease;
+}
+.langMenuHead {
+  padding: 0.6rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text3);
+  border-bottom: 1px solid var(--border);
+}
+.langOpt {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  font-size: 0.82rem;
+  color: var(--text2);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Instrument Sans', sans-serif;
+  transition: background 0.12s;
+}
+.langOpt:hover { background: var(--bg); color: var(--text); }
+.langOpt.active { background: var(--accent-lt); color: var(--accent); font-weight: 500; }
+
+/* Buttons */
+.btnGhost {
+  background: none;
+  border: 1px solid var(--border2);
+  color: var(--text);
+  font-family: 'Instrument Sans', sans-serif;
+  border-radius: 2rem;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btnGhost:hover { border-color: var(--accent); color: var(--accent); }
+
+.btnPrimary {
+  background: var(--accent);
+  color: white;
+  border: none;
+  font-family: 'Instrument Sans', sans-serif;
+  border-radius: 2rem;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btnPrimary:hover { background: var(--accent2); }

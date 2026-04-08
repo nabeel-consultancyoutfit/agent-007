@@ -1,0 +1,194 @@
+.inputArea {
+  padding: 0;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.inputRow {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  padding: 0.75rem 1.25rem 0.25rem;
+}
+
+.inputWrap {
+  flex: 1;
+  background: var(--bg);
+  border: 1.5px solid var(--border2);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.inputWrap:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(200,98,42,0.08);
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  outline: none;
+  resize: none;
+  min-height: 44px;
+  max-height: 120px;
+  box-sizing: border-box;
+}
+
+.inputBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.4rem 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.iconBtn {
+  width: 30px; height: 30px;
+  border-radius: 8px;
+  border: none;
+  background: var(--bg2);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.18s;
+  position: relative;
+}
+.iconBtn svg { width: 15px; height: 15px; transition: stroke 0.15s; }
+.iconBtn:hover { transform: translateY(-2px) scale(1.08); box-shadow: 0 4px 14px rgba(0,0,0,0.12); }
+.iconBtn:hover svg { stroke: white; }
+
+.purple { background: #F3EEFF; }
+.purple svg { stroke: #7C3AED; }
+.purple:hover { background: #7C3AED; }
+
+.orange { background: #FFFBEB; }
+.orange svg { stroke: #D97706; }
+.orange:hover { background: #D97706; }
+
+.blue { background: #EFF6FF; }
+.blue svg { stroke: #2563EB; }
+.blue:hover { background: #2563EB; }
+
+.teal { background: #E2F5EF; }
+.teal svg { stroke: #0A5E49; }
+.teal:hover { background: #0A5E49; }
+
+.rose { background: #FDEDF1; }
+.rose svg { stroke: #9B2042; }
+.rose:hover { background: #9B2042; }
+
+.green { background: #ECFDF5; }
+.green svg { stroke: #059669; }
+.green:hover { background: #059669; }
+
+.promptTip {
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text3);
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.promptTip:hover { background: var(--bg2); color: var(--text); }
+
+.modelSel {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--text3);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.modelSel:hover { color: var(--accent); }
+
+.sendBtn {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.sendBtn:hover { background: var(--accent2); transform: scale(1.06); }
+
+/* Category Prompt Panel */
+.cpanel {
+  border-top: 1px solid var(--border);
+  background: var(--white);
+  flex-shrink: 0;
+}
+.cpanelTabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.6rem 1rem 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.cpanelTabs::-webkit-scrollbar { display: none; }
+.cpanelTab {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.38rem 0.85rem;
+  border: 1.5px solid var(--border2);
+  border-radius: 2rem;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.77rem;
+  font-weight: 500;
+  color: var(--text2);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.16s;
+}
+.cpanelTab:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-lt); }
+.cpanelTabActive { background: var(--text) !important; border-color: var(--text) !important; color: var(--white) !important; }
+
+.cpanelPrompts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.35rem 1rem 0.55rem;
+  gap: 2px;
+}
+.cpanelPrompt {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.35rem 0.45rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.77rem;
+  color: var(--text2);
+  background: none;
+  border: none;
+  font-family: inherit;
+  text-align: left;
+  width: 100%;
+  line-height: 1.35;
+  transition: background 0.13s, color 0.13s;
+}
+.cpanelPrompt:hover { background: var(--bg2); color: var(--text); }
+.cpanelPrompt::before {
+  content: '';
+  display: inline-block;
+  flex-shrink: 0;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--text3);
+  margin-right: 7px;
+  margin-top: 5px;
+}

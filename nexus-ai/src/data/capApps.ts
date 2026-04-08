@@ -1,0 +1,152 @@
+import type { CapApp, SuggestedQuestion } from '@/types';
+
+export const CAP_APPS: Record<string, CapApp[]> = {
+  use_cases: [
+    { emoji: '✍️', label: 'Write blog posts', query: 'Write a detailed blog post about', bg: 'linear-gradient(135deg,#1e3a5f,#2d6a4f)', previewHTML: '<span style="font-size:2rem;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.3))">✍️</span>' },
+    { emoji: '💻', label: 'Generate code', query: 'Write code to', bg: 'linear-gradient(135deg,#1a1a2e,#16213e)', previewHTML: '<span style="font-size:2rem">💻</span>' },
+    { emoji: '📊', label: 'Analyse data', query: 'Analyse this data and provide insights:', bg: 'linear-gradient(135deg,#0f3460,#533483)', previewHTML: '<span style="font-size:2rem">📊</span>' },
+    { emoji: '🎨', label: 'Create images', query: 'Create an image of', bg: 'linear-gradient(135deg,#7b2d8b,#c8622a)', previewHTML: '<span style="font-size:2rem">🎨</span>' },
+    { emoji: '🤖', label: 'Build an agent', query: 'Build an AI agent that can', bg: 'linear-gradient(135deg,#2d3561,#c05780)', previewHTML: '<span style="font-size:2rem">🤖</span>' },
+    { emoji: '📧', label: 'Write emails', query: 'Write a professional email to', bg: 'linear-gradient(135deg,#1e4d2b,#14532d)', previewHTML: '<span style="font-size:2rem">📧</span>' },
+  ],
+  build_business: [
+    { emoji: '🚀', label: 'Product launch plan', query: 'Create a comprehensive product launch plan for', bg: 'linear-gradient(135deg,#7c3aed,#db2777)' },
+    { emoji: '💰', label: 'Revenue model', query: 'Design a revenue model for a business that', bg: 'linear-gradient(135deg,#065f46,#0f766e)' },
+    { emoji: '📈', label: 'Marketing strategy', query: 'Develop a marketing strategy for', bg: 'linear-gradient(135deg,#1e3a5f,#1e40af)' },
+    { emoji: '👥', label: 'Hiring plan', query: 'Create a hiring plan and org chart for', bg: 'linear-gradient(135deg,#7f1d1d,#9a3412)' },
+  ],
+  learn: [
+    { emoji: '🧠', label: 'Explain AI concepts', query: 'Explain in simple terms:', bg: 'linear-gradient(135deg,#1e3a5f,#0369a1)' },
+    { emoji: '📚', label: 'Study guide', query: 'Create a comprehensive study guide for', bg: 'linear-gradient(135deg,#4c1d95,#7c3aed)' },
+    { emoji: '❓', label: 'Quiz me', query: 'Create a quiz to test my knowledge on', bg: 'linear-gradient(135deg,#1a1a2e,#2d6a4f)' },
+    { emoji: '🗺️', label: 'Learning roadmap', query: 'Create a learning roadmap for someone who wants to', bg: 'linear-gradient(135deg,#7f1d1d,#be185d)' },
+  ],
+  monitor: [
+    { emoji: '📰', label: 'News summary', query: 'Summarise the latest news about', bg: 'linear-gradient(135deg,#0f172a,#1e3a5f)' },
+    { emoji: '🏪', label: 'Competitor analysis', query: 'Analyse the competitive landscape for', bg: 'linear-gradient(135deg,#14532d,#065f46)' },
+    { emoji: '📉', label: 'Risk assessment', query: 'Assess the risks and opportunities in', bg: 'linear-gradient(135deg,#7f1d1d,#9a3412)' },
+    { emoji: '🌡️', label: 'Trend analysis', query: 'Analyse current trends in', bg: 'linear-gradient(135deg,#1e1b4b,#4c1d95)' },
+  ],
+  research: [
+    { emoji: '🔬', label: 'Literature review', query: 'Conduct a literature review on', bg: 'linear-gradient(135deg,#1e3a5f,#0369a1)' },
+    { emoji: '📑', label: 'Research summary', query: 'Summarise recent research on', bg: 'linear-gradient(135deg,#4a044e,#7c3aed)' },
+    { emoji: '🧪', label: 'Hypothesis testing', query: 'Help me design an experiment to test', bg: 'linear-gradient(135deg,#0f3460,#1a936f)' },
+    { emoji: '🗃️', label: 'Systematic review', query: 'Create a systematic review framework for', bg: 'linear-gradient(135deg,#1c1917,#44403c)' },
+  ],
+  create: [
+    { emoji: '🎬', label: 'Video script', query: 'Write a compelling video script about', bg: 'linear-gradient(135deg,#7f1d1d,#be123c)' },
+    { emoji: '🎙️', label: 'Podcast script', query: 'Write a podcast episode script covering', bg: 'linear-gradient(135deg,#2e1065,#5b21b6)' },
+    { emoji: '📱', label: 'Social media posts', query: 'Write a social media content series about', bg: 'linear-gradient(135deg,#0369a1,#0891b2)' },
+    { emoji: '📖', label: 'Short story', query: 'Write a short story about', bg: 'linear-gradient(135deg,#14532d,#166534)' },
+  ],
+  analyze: [
+    { emoji: '💡', label: 'SWOT analysis', query: 'Perform a SWOT analysis for', bg: 'linear-gradient(135deg,#713f12,#92400e)' },
+    { emoji: '📋', label: 'Document analysis', query: 'Analyse this document and extract key insights:', bg: 'linear-gradient(135deg,#1e3a5f,#1e40af)' },
+    { emoji: '🔍', label: 'Root cause analysis', query: 'Perform a root cause analysis for', bg: 'linear-gradient(135deg,#1c1917,#292524)' },
+    { emoji: '📊', label: 'Financial analysis', query: 'Analyse the financial data and provide insights for', bg: 'linear-gradient(135deg,#065f46,#047857)' },
+  ],
+};
+
+export const ACP_SUGGESTED: Record<string, SuggestedQuestion[]> = {
+  use_cases: [
+    { icon: '✍️', text: 'Write a professional email to a difficult client' },
+    { icon: '💻', text: 'Build a REST API with authentication in Node.js' },
+    { icon: '📊', text: 'Create a Python script to analyse CSV data' },
+    { icon: '🎨', text: 'Generate a detailed image prompt for a tech startup logo' },
+    { icon: '🤖', text: 'Design an AI agent workflow for customer support' },
+    { icon: '📝', text: 'Write SEO-optimized blog content about AI trends' },
+    { icon: '🔧', text: 'Debug and fix this JavaScript async function' },
+    { icon: '📱', text: 'Create a mobile-first UI design specification' },
+  ],
+  build_business: [
+    { icon: '🚀', text: 'Create a 90-day product launch plan for a SaaS app' },
+    { icon: '💰', text: 'Design a freemium pricing model with upsell triggers' },
+    { icon: '📈', text: 'Write a go-to-market strategy for B2B software' },
+    { icon: '🤝', text: 'Create an investor pitch deck outline for seed round' },
+    { icon: '👥', text: 'Design a sales compensation plan for a 10-person team' },
+    { icon: '📊', text: 'Build a financial model with 3-year revenue projections' },
+  ],
+  learn: [
+    { icon: '🧠', text: 'Explain transformer architecture in simple terms' },
+    { icon: '📚', text: 'Create a 30-day Python learning plan for beginners' },
+    { icon: '❓', text: 'Quiz me on machine learning fundamentals' },
+    { icon: '🗺️', text: 'Build a learning roadmap for becoming a data scientist' },
+    { icon: '💡', text: 'Explain RAG vs fine-tuning with practical examples' },
+    { icon: '🎯', text: 'Teach me prompt engineering techniques with exercises' },
+  ],
+  monitor: [
+    { icon: '📰', text: 'Summarise latest developments in AI regulation' },
+    { icon: '🏪', text: 'Compare GPT-5, Claude Opus 4.6, and Gemini 3.1 Pro' },
+    { icon: '📉', text: 'Identify risks in deploying LLMs in healthcare' },
+    { icon: '🌡️', text: 'Analyse AI adoption trends in enterprise software' },
+    { icon: '🔭', text: 'What are the top AI research breakthroughs this month?' },
+    { icon: '⚠️', text: 'List common AI hallucination patterns and mitigations' },
+  ],
+  research: [
+    { icon: '🔬', text: 'Summarise recent papers on chain-of-thought reasoning' },
+    { icon: '📑', text: 'What is the current SOTA on code generation benchmarks?' },
+    { icon: '🧪', text: 'Design an A/B test for AI chatbot response quality' },
+    { icon: '📊', text: 'Compare benchmark results: HumanEval, MBPP, LiveCodeBench' },
+    { icon: '🗃️', text: 'List the top 10 most cited AI papers from 2025' },
+    { icon: '🏛️', text: 'Explain the differences between MoE and dense transformer models' },
+  ],
+  create: [
+    { icon: '🎬', text: 'Write a 5-minute explainer video script on AI agents' },
+    { icon: '🎙️', text: 'Create a podcast episode outline on open-source AI models' },
+    { icon: '📱', text: 'Write 7 LinkedIn posts about AI productivity tips' },
+    { icon: '📖', text: 'Write a sci-fi short story set in 2040 with AI characters' },
+    { icon: '🎨', text: 'Create image prompts for a 10-part visual story series' },
+    { icon: '📧', text: 'Write a 5-email nurture sequence for an AI tool SaaS' },
+  ],
+  analyze: [
+    { icon: '💡', text: 'Do a SWOT analysis of OpenAI vs Anthropic vs Google' },
+    { icon: '📋', text: 'Extract key action items from this meeting transcript' },
+    { icon: '🔍', text: 'Analyse why AI projects fail and how to prevent it' },
+    { icon: '📊', text: 'Create a competitive analysis framework for AI startups' },
+    { icon: '🧮', text: 'Calculate ROI of deploying an AI writing assistant for a 50-person team' },
+    { icon: '🔐', text: 'Identify security vulnerabilities in this code snippet' },
+  ],
+};
+
+export const SQ_DATA: Record<string, Array<{ icon: string; text: string }>> = {
+  recruiting: [
+    { icon: '🔍', text: 'Find the best AI model to screen resumes automatically' },
+    { icon: '📝', text: 'Write AI-powered interview questions for a senior engineer' },
+    { icon: '📊', text: 'Compare candidates using structured AI evaluation criteria' },
+    { icon: '✉️', text: 'Generate personalised outreach messages for passive candidates' },
+    { icon: '🤖', text: 'Build an AI agent to automate the recruiting pipeline' },
+    { icon: '📈', text: 'Use AI to predict candidate success from application data' },
+  ],
+  prototype: [
+    { icon: '💻', text: 'Build a Next.js app with authentication and database in 1 hour' },
+    { icon: '🎨', text: 'Design a landing page prototype using AI assistance' },
+    { icon: '📱', text: 'Create a mobile app wireframe with AI-generated components' },
+    { icon: '🔧', text: 'Scaffold a REST API with Swagger docs using AI' },
+    { icon: '🤖', text: 'Prototype an AI chatbot with custom persona in minutes' },
+    { icon: '⚡', text: 'Generate a working MVP from a simple text description' },
+  ],
+  business: [
+    { icon: '🚀', text: 'Write a business plan for an AI-powered SaaS startup' },
+    { icon: '💰', text: 'Model revenue projections with AI for different growth scenarios' },
+    { icon: '📊', text: 'Analyse market size and competitors for an AI product' },
+    { icon: '📧', text: 'Create an AI-powered email marketing campaign strategy' },
+    { icon: '🤝', text: 'Draft a partnership proposal using AI to optimise persuasion' },
+    { icon: '📈', text: 'Generate a 12-month KPI dashboard and tracking system' },
+  ],
+  learn: [
+    { icon: '🧠', text: 'Explain how large language models work in plain English' },
+    { icon: '📚', text: 'Create a personalised study plan for machine learning' },
+    { icon: '❓', text: 'Quiz me on AI fundamentals and track my progress' },
+    { icon: '💡', text: 'Teach me prompt engineering with hands-on exercises' },
+    { icon: '🗺️', text: 'Build a roadmap to go from beginner to AI engineer' },
+    { icon: '🎯', text: 'Recommend the best AI models for learning Python' },
+  ],
+  research: [
+    { icon: '🔬', text: 'Summarise the latest AI safety research from Anthropic' },
+    { icon: '📑', text: 'Compare reasoning models: o3 vs Claude Opus vs Gemini 2.5 Pro' },
+    { icon: '🧪', text: 'Find empirical evidence for AI hallucination reduction techniques' },
+    { icon: '📊', text: 'What are the SOTA benchmarks for code generation models?' },
+    { icon: '🏛️', text: 'Explain Mixture-of-Experts architecture and its advantages' },
+    { icon: '⚙️', text: 'Compare RAG vs fine-tuning for domain-specific AI applications' },
+  ],
+};

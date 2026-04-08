@@ -1,0 +1,77 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1.25rem;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  color: var(--text);
+}
+.logoMark {
+  width: 22px; height: 22px;
+  background: var(--accent);
+  border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+}
+.logoMark svg { width: 11px; height: 11px; }
+
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.tab {
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-family: 'Instrument Sans', sans-serif;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--text2);
+  border-radius: 2rem;
+  transition: all 0.15s;
+  font-weight: 500;
+}
+.tab:hover { background: var(--bg2); color: var(--text); }
+.tab.active { background: var(--accent-lt); color: var(--accent); }
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.iconBtn {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text2);
+  transition: all 0.15s;
+}
+.iconBtn:hover { background: var(--bg2); color: var(--text); }
+
+.avatar {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}

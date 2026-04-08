@@ -1,0 +1,420 @@
+/* ── Card wrapper ──────────────────────────────────────────────────── */
+.card {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  background: var(--card);
+  border: 1.5px solid var(--border2);
+  border-radius: 18px;
+  padding: 14px 16px 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.focused {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(200,98,42,0.10), 0 4px 24px rgba(0,0,0,0.10);
+}
+
+/* ── Input row ─────────────────────────────────────────────────────── */
+.topRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.97rem;
+  color: var(--text);
+  resize: none;
+  min-height: 28px;
+  line-height: 1.5;
+  padding: 2px 0;
+}
+
+.input::placeholder { color: var(--text3); }
+
+.avatarIcons {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding-top: 3px;
+  flex-shrink: 0;
+}
+
+.avatarIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* ── Welcome phase ─────────────────────────────────────────────────── */
+.welcomePhase {
+  padding: 4px 2px 8px;
+}
+
+.wpHead {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.wpAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wpText { flex: 1; }
+
+.wpTitle {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.wpSub {
+  font-size: 0.8rem;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.wpActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.wpStartBtn {
+  padding: 0.45rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+.wpStartBtn:hover { background: #b5562a; }
+
+.wpSkipBtn {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.78rem;
+  color: var(--text3);
+  background: none;
+  border: 1.5px solid var(--border2);
+  border-radius: 2rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.wpSkipBtn:hover { color: var(--text); border-color: var(--border); }
+
+.countdown {
+  height: 3px;
+  border-radius: 99px;
+  background: var(--border2);
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.countdownFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 99px;
+  transition: width 0.08s linear;
+}
+
+.countdownLabel {
+  font-size: 0.7rem;
+  color: var(--text3);
+  text-align: center;
+}
+
+/* ── Questions phase ───────────────────────────────────────────────── */
+.questionMode {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(200,98,42,0.10), 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.questionsPhase {
+  padding: 2px 2px 4px;
+}
+
+.qpHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.qpEyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.qpClose {
+  background: none;
+  border: none;
+  color: var(--text3);
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+.qpClose:hover { color: var(--text); }
+
+.qpBody {
+  transition: opacity 0.18s ease;
+}
+
+.qpFade { opacity: 0; }
+
+.qpTitle {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.qpHint {
+  font-size: 0.76rem;
+  color: var(--text3);
+  margin-bottom: 12px;
+}
+
+.qpOpts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+
+.qpOpt {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0.6rem 0.75rem;
+  background: var(--bg);
+  border: 1.5px solid var(--border2);
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition: all 0.14s;
+}
+.qpOpt:hover {
+  border-color: var(--accent);
+  background: var(--accent-lt, #FDF1EB);
+}
+
+.qpOptEm {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.qpOptLabel {
+  display: block;
+  font-weight: 600;
+  font-size: 0.81rem;
+  color: var(--text);
+}
+
+.qpOptSub {
+  display: block;
+  font-size: 0.69rem;
+  color: var(--text3);
+  margin-top: 1px;
+  line-height: 1.3;
+}
+
+.qpFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.qpDots {
+  display: flex;
+  gap: 5px;
+}
+
+.qpDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border2);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.qpDotActive {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+
+.qpDotDone {
+  background: var(--accent);
+  opacity: 0.4;
+}
+
+.qpSkip {
+  font-size: 0.75rem;
+  color: var(--text3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 2px 4px;
+}
+.qpSkip:hover { color: var(--text2); }
+
+/* ── Building phase ────────────────────────────────────────────────── */
+.buildingPhase {
+  padding: 18px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.buildSpinner {
+  display: flex;
+  gap: 6px;
+}
+
+.buildDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: bDotBounce 0.9s ease-in-out infinite;
+}
+.buildDot:nth-child(2) { animation-delay: 0.15s; }
+.buildDot:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes bDotBounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.5; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+.buildTitle {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.buildSub {
+  font-size: 0.76rem;
+  color: var(--text3);
+}
+
+/* ── Bottom bar ────────────────────────────────────────────────────── */
+.bottomBar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border2);
+  margin-top: 4px;
+}
+
+.ibox {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text3);
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.ibox:hover {
+  background: var(--ic-lt, #f5f5f5);
+  color: var(--ic, var(--accent));
+  border-color: var(--ic-border, transparent);
+}
+
+.iboxInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barSep {
+  width: 1px;
+  height: 20px;
+  background: var(--border2);
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
+.agentChip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text2);
+  background: var(--bg);
+  border: 1.5px solid var(--border2);
+  border-radius: 2rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.agentChip:hover { border-color: var(--accent); color: var(--accent); }
+
+.plus {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.goBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.42rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: white;
+  background: var(--accent);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+.goBtn:hover { background: #b5562a; }

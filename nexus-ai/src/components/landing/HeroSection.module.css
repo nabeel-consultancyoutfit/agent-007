@@ -1,0 +1,181 @@
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem 3rem;
+  text-align: center;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(200,98,42,0.07) 0%, transparent 70%);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, var(--border2) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.heroEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--white);
+  border: 1px solid var(--border2);
+  border-radius: 2rem;
+  padding: 0.35rem 1rem;
+  font-size: 0.78rem;
+  color: var(--text2);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.liveDot {
+  width: 6px; height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.heroTitle {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.5rem, 6.5vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  max-width: 800px;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+.accent { color: var(--accent); }
+
+.heroSub {
+  font-size: 1.05rem;
+  color: var(--text2);
+  max-width: 500px;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+/* Suggested Questions Panel */
+.sqPanel {
+  width: 100%;
+  max-width: 900px;
+  background: var(--white);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  margin-top: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.sqTabs {
+  display: flex;
+  gap: 4px;
+  padding: 0.75rem 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+.sqTabs::-webkit-scrollbar { display: none; }
+
+.sqTab {
+  padding: 0.4rem 0.85rem;
+  border: none;
+  background: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text2);
+  cursor: pointer;
+  border-radius: 6px 6px 0 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+  font-family: 'Instrument Sans', sans-serif;
+  white-space: nowrap;
+}
+.sqTab:hover { color: var(--text); }
+.sqTab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+.sqBody { padding: 0.5rem 0; }
+.sqList { display: grid; grid-template-columns: 1fr 1fr; }
+
+.sqItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.6rem 1rem;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Instrument Sans', sans-serif;
+  transition: background 0.12s;
+  border-bottom: 1px solid var(--border);
+}
+.sqItem:hover { background: var(--bg); }
+.sqIcon {
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  background: var(--bg2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.sqText { font-size: 0.82rem; color: var(--text2); line-height: 1.35; }
+
+.sqFooter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.55rem 1rem;
+  font-size: 0.72rem;
+  color: var(--text3);
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.sqFooter strong { color: var(--text2); }
+
+/* Action Grid */
+.actionGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-top: 1.5rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .actionGrid { grid-template-columns: repeat(4, 1fr); }
+  .sqList { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .actionGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.actionBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0.75rem 0.5rem;
+  background: var(--white);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Instrument Sans', sans-serif;
+}
+.actionBtn:hover {
+  background: var(--accent-lt);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.actionIcon { font-size: 1.2rem; }
+.actionLabel { font-size: 0.7rem; font-weight: 500; color: var(--text2); text-align: center; line-height: 1.3; }
+.actionBtn:hover .actionLabel { color: var(--accent); }
